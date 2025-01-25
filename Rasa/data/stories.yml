@@ -1,0 +1,61 @@
+version: "3.1"
+stories:
+  # Story for greeting the bot
+  - story: user greets bot
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Story for user asking about company info
+  - story: user asks about company info
+    steps:
+      - intent: company_info
+      - action: utter_company_info
+
+  # Story for user asking about products and services
+  - story: user asks about products and services
+    steps:
+      - intent: products_services
+      - action: utter_products_services
+
+  # Story for user asking about industries served
+  - story: user asks about industries served
+    steps:
+      - intent: industries_served
+      - action: utter_industries_served
+
+  # Story for user asking about consulting services
+  - story: user asks about consulting services
+    steps:
+      - intent: consulting_services
+      - action: utter_consulting_services
+
+  # Story for user asking about awards and recognitions
+  - story: user asks about awards and recognitions
+    steps:
+      - intent: awards_recognition
+      - action: utter_awards_recognition
+
+  # Story for user asking about clients and partners
+  - story: user asks about clients and partners
+    steps:
+      - intent: clients_partners
+      - action: utter_clients_partners
+
+  # Story for goodbye intent
+  - story: user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Story for user having an unhappy mood
+  - story: user is unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
+
+  # Story for fallback when the bot doesn't understand
+  - story: bot doesn't understand
+    steps:
+      - intent: unknown_intent
+      - action: action_default_fallback

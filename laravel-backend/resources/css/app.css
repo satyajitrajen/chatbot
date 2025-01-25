@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite";
+.wrap-name {
+    word-wrap: break-word; /* For long word wrapping */
+    overflow-wrap: anywhere; /* Break text at any character, even without spaces */
+    white-space: normal; /* Allows wrapping to occur */
+    width: 200px; /* Adjust to fit your layout */
+}
+.no-wrap {
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (…) to indicate truncated text */
+    width: 200px; /* Adjust this width as needed */
+    display: inline-block; /* Ensures the width restriction applies */
+}
+
+
+#predefined-suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-bottom: 10px; /* Adds spacing below the suggestions box */
+    bottom: 50px; /* Adjust the distance from the bottom of the input field */
+}
+
+#predefined-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#predefined-suggestions div:hover {
+    background-color: #f1f1f1;
+}

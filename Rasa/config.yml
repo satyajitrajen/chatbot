@@ -1,0 +1,42 @@
+version: "3.1"
+recipe: "default.v1"
+
+language: "en"
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+
+
+# Policies to manage dialogues and fallback
+policies:
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+- name: RulePolicy
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: True
+- name: FallbackClassifier
+  threshold: 0.3
+  ambiguity_threshold: 0.1
+
+
+
+# Default configuration settings for the fallback policy
+fallback:
+- name: FallbackPolicy
+  nlu_threshold: 0.3
+  core_threshold: 0.3
+  fallback_action_name: "action_default_fallback"
+  deny_suggestion_intent_name: "none"
+assistant_id: 20250110-192954-pink-celesta

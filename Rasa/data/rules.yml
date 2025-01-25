@@ -1,0 +1,55 @@
+version: "3.1"
+rules:
+  # Rule for greeting
+  - rule: User greets the bot
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Rule for goodbye
+  - rule: User says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Rule for when user asks about the company
+  - rule: User asks about company info
+    steps:
+      - intent: company_info
+      - action: utter_company_info
+
+  # Rule for when user asks about products and services
+  - rule: User asks about products and services
+    steps:
+      - intent: products_services
+      - action: utter_products_services
+
+  # Rule for when user asks about industries served
+  - rule: User asks about industries served
+    steps:
+      - intent: industries_served
+      - action: utter_industries_served
+
+  # Rule for consulting services
+  - rule: User asks about consulting services
+    steps:
+      - intent: consulting_services
+      - action: utter_consulting_services
+
+  # Rule for awards and recognitions
+  - rule: User asks about awards and recognitions
+    steps:
+      - intent: awards_recognition
+      - action: utter_awards_recognition
+
+  # Rule for clients and partners
+  - rule: User asks about clients and partners
+    steps:
+      - intent: clients_partners
+      - action: utter_clients_partners
+
+  # Fallback rule when no intent matches
+  - rule: Fallback for unknown intents
+    steps:
+      - intent: unknown_intent
+      - action: action_default_fallback

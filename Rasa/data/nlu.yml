@@ -1,0 +1,93 @@
+version: "3.1"
+nlu:
+  # Greeting Intent
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey there
+      - Good morning
+
+  # Company Information Intent
+  - intent: company_info
+    examples: |
+      - Tell me about the company
+      - What is Imperative Business Ventures?
+      - What does Imperative do?
+      - Who are you?
+      - What is your mission?
+      - Where are you located?
+  
+  # Products and Services Intent
+  - intent: products_services
+    examples: |
+      - What are your products and services?
+      - Tell me about FinBO+
+      - What is ImperaAFMS?
+      - What does ImperaBOT do?
+      - Can you tell me about your software products?
+      - What is business process automation?
+  
+  # Industries Served Intent
+  - intent: industries_served
+    examples: |
+      - What industries do you serve?
+      - Who are your clients?
+      - Tell me about your industries
+      - What sectors does Imperative serve?
+      - In which sectors do you operate?
+      - Do you serve any specific industries?
+
+  # Consulting Services Intent
+  - intent: consulting_services
+    examples: |
+      - Tell me about your consulting services
+      - What kind of consulting do you offer?
+      - How can I get consulting from Imperative?
+      - What are your digital transformation services?
+      - Can you provide business process consulting?
+
+  # Awards and Recognition Intent
+  - intent: awards_recognition
+    examples: |
+      - Have you won any awards?
+      - What awards has Imperative received?
+      - Tell me about your recognitions
+      - What recognitions has Imperative earned?
+      - Have you been recognized by any organizations?
+    
+  # Clients and Partners Intent
+  - intent: clients_partners
+    examples: |
+      - Who are your clients and partners?
+      - Tell me about your clients
+      - Who do you work with?
+      - Do you have any major partnerships?
+      - Can you list some of your partners?
+      - Who are some of your notable clients?
+
+  # Support and Contact Information Intent
+  - intent: support_contact
+    examples: |
+      - How can I contact you?
+      - Where can I find support?
+      - How can I reach customer service?
+      - Can I get in touch with an agent?
+      - How do I get in touch with your team?
+
+  # Case Studies and Success Stories Intent
+  - intent: case_studies_success
+    examples: |
+      - Do you have any case studies?
+      - Tell me about your success stories
+      - Can you share some client experiences?
+      - Where can I read about your successful projects?
+
+  # Technology and Innovation Intent
+  - intent: technology_innovation
+    examples: |
+      - What technologies do you use?
+      - How do you innovate in your services?
+      - Tell me about the technology behind your products
+      - What makes your products innovative?
+      - Can you explain the AI technologies you use?

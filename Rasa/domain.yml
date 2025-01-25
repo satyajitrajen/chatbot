@@ -1,0 +1,84 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - company_info
+  - products_services
+  - industries_served
+  - consulting_services
+  - awards_recognition
+  - clients_partners
+  - unknown_intent
+  - mood_unhappy
+entities:
+  - user_id
+  - cuser
+  - cuser_name
+  - industry
+  - product
+  - service
+  - award
+  - client
+
+slots:
+  user_id:
+    type: text
+    mappings:
+      - type: from_text
+  cuser:
+    type: text
+    mappings:
+      - type: from_text
+  cuser_name:
+    type: text
+    mappings:
+      - type: from_text
+  industry:
+    type: text
+    mappings:
+      - type: from_text
+  product:
+    type: text
+    mappings:
+      - type: from_text
+  service:
+    type: text
+    mappings:
+      - type: from_text
+  award:
+    type: text
+    mappings:
+      - type: from_text
+  client:
+    type: text
+    mappings:
+      - type: from_text
+
+forms:
+  collect_industry_info:
+    required_slots:
+      - industry
+      - product
+      - service
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_company_info:
+    - text: "We are Imperative Business Ventures, a company focused on providing consulting, outsourcing, and technology services, with a focus on digital transformation."
+  utter_products_services:
+    - text: "We offer a range of services including AI, ML, and RPA-based solutions for various industries."
+  utter_industries_served:
+    - text: "We serve industries like BFSI, healthcare, telecom, retail, hospitality, media & entertainment, and more."
+  utter_consulting_services:
+    - text: "We provide consulting services to help businesses automate their processes and drive digital transformation."
+  utter_awards_recognition:
+    - text: "We have been recognized with multiple awards including Dun & Bradstreet's 'India’s Top 100 Leading SMEs' and Economic Times - ETRISE 'Top 10 Leading MSMEs 2020'."
+  utter_clients_partners:
+    - text: "We work with clients across various sectors, including major banking, telecom, healthcare, and e-commerce companies."
+
+actions:
+  - action_collect_industry_info

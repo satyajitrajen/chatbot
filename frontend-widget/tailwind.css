@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#chat-widget {
+    font-family: Arial, sans-serif;
+}
+
+#chat-box {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    line-height: 1.25rem; /* Tailwind's leading-5 */
+}
